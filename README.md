@@ -105,7 +105,7 @@
 ## 🗃️ PROJECT ARCHITECTS
 <div align="center">
   <a href="https://github.com/JawadYT36">
-    <img src="https://github-readme-stats.vercel.app/api?username=JawadYT36&show_icons=true&theme=dark&border_color=00ffff&title_color=00ffff&icon_color=00ffff" width="400"/>
+    <img src="https://github-readme-stats.vercel.app/api?username=Jester36&show_icons=true&theme=dark&border_color=00ffff&title_color=00ffff&icon_color=00ffff" width="400"/>
   </a>
 </div>
 
@@ -113,7 +113,7 @@
   <img src="https://github.com/JawadYT36/KHAN-MD/blob/main/assets/futuretech.gif?raw=true" width="100%"/>
 </div>
 
-## 👑 KHAN STATUS
+## 👑 JESTER STATUS
 
 ```diff
 + Project Status: Active

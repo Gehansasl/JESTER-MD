@@ -65,10 +65,11 @@ cmd({
 },
 async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sender, senderNumber, botNumber2, botNumber, pushname, isMe, isOwner, groupMetadata, groupName, participants, groupAdmins, isBotAdmins, isAdmins, reply }) => {
     try {
-        const startTime = Date.now()
-        const { key } = await conn.sendMessage(from, { text: '*PINGING...*' })
-        const endTime = Date.now()
-        const ping = endTime - startTime
+        const startTime = Date.now();
+        const { key } = await conn.sendMessage(from, { text: '*PINGING...*' });
+        const endTime = Date.now();
+        const ping = endTime - startTime;
+    
         const loadingStages = [
             'ʟᴏᴀᴅɪɴɢ 《 ▭▭▭▭▭▭▭▭▭▭ 》0%,',
             'ʟᴏᴀᴅɪɴɢ 《 ▬▭▭▭▭▭▭▭▭▭ 》10%,',
@@ -81,26 +82,27 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
             'ʟᴏᴀᴅɪɴɢ 《 ▬▬▬▬▬▬▬▬▭▭ 》80%,',
             'ʟᴏᴀᴅɪɴɢ 《 ▬▬▬▬▬▬▬▬▬▭ 》90%,',
             'ʟᴏᴀᴅɪɴɢ 《 ▬▬▬▬▬▬▬▬▬▬ 》100%,',
-            `𝐑𝐞𝐬𝐩𝐨𝐧𝐬𝐞 𝐒𝐩𝐞𝐞𝐝 ${latency} 𝐦𝐬`,
-          ]
-         for (let i = 0; i < loadingStages.length; i++) {
-            await sleep(50)
+            `𝐑𝐞𝐬𝐩𝐨𝐧𝐬𝐞 𝐒𝐩𝐞𝐞𝐝 ${ping} 𝐦𝐬`,
+        ];
+    
+        for (let i = 0; i < loadingStages.length; i++) {
+            await sleep(50);
             await conn.relayMessage(
-             from,
-              {
-                protocolMessage: {
-                  key: key,
-                  type: 14,
-                  editedMessage: {
-                    conversation: loadingStages[i],
-                  },
+                from,
+                {
+                    protocolMessage: {
+                        key: key,
+                        type: 14,
+                        editedMessage: {
+                            conversation: loadingStages[i],
+                        },
+                    },
                 },
-              },
-              {}
-            )
-          }
+                {}
+            );
+        }
     } catch (e) {
-        console.log(e)
-        reply(`${e}`)
+        console.log(e);
+        reply(`${e}`);
     }
 })

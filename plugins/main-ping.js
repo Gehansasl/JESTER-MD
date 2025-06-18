@@ -86,7 +86,6 @@ async (conn, mek, m, { from, quoted, body, isCmd, command, args, q, isGroup, sen
         ];
     
         for (let i = 0; i < loadingStages.length; i++) {
-            await sleep(50);
             await conn.relayMessage(
                 from,
                 {
